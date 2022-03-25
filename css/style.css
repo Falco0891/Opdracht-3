@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+header {
+    height: 95vh;
+    background: url(../img/background.jpg) no-repeat center fixed;
+    background-size: 100%;
+    position: relative;
+}
+
+h1 {
+    font-weight: 400;
+    font-size: 210%;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 100%;
+    margin-bottom: 10px;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 250%;
+    transform: translateX(30%);
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.img{
+    margin-bottom: 300px;
+}
+
+header > h1 {
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 300%;
+}
+
+header > button {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    width: 300px;
+    padding: 20px 40px;
+    color: white;
+    font-size: 130%;
+    background-color: #a37f44;
+    transform: translateX(-50%);
+    border-radius: 5px;
+    border: none;
+}
+
+header > button:hover{
+    cursor:pointer;
+    background-color: #8a6b3a;
+}
+
+main{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    grid-row-gap: 30px;
+    padding: 80px 0px;
+}
+
+main > figure > img{
+    width: 100%;
+    transition: 0.2s all;
+}
+
+main > figure > img:hover{
+    transform: scale(1.1);
+}
+
+footer{
+    width: 80%;
+    margin: 0 auto; 
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 80px;
+    padding: 40px 0px;
+}
+
+footer > h2 {
+    grid-column-start: 3;
+    font-weight: 400;
+    font-size: 110%;
+}
+
+.overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    opacity: 0.5    ;
+    background-color: black;
+}
+
+.filterwrapper {
+    max-width: 960px;
+    margin: 30px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.filterContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    margin-bottom: 3rem;
+}
+
+.filterContainer button {
+    color: white;
+    font-size: 130%;
+    padding: 1rem;
+    border: 0;
+    cursor: pointer;
+    font-size: 1.1rem;
+    background-color: #a37f44;
+    transition: all 0.3s;
+    border-radius: 5px;
+    border: none;
+}
+
+.filterContainer button:hover {
+    background-color: #8a6b3a;
+}
+
+.filterContainer .activeFilter {
+    background-color: #755c33;
+}
+
+.verborgen {
+    display: none;
+}
+
+.cardsContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3rem;
+    max-width: 100%;
+    margin-bottom: 3rem;
+}
+
+.FavorietKnop {
+    border: 0;
+    cursor: pointer;
+}
+
+.FavorietKnop:hover {
+    filter: brightness(1.3);
+}
+
+@media only screen and (max-width: 1110px) {
+    h3{
+        font-size: 15px;
+    }
+
+    header > h1 {
+        font-size: 200%;
+    }
+
+    
+header {
+    height: 95vh;
+    background: url(../img/background.jpg) no-repeat center fixed;
+    background-size: 180%;
+    position: relative
+}
+
+}
+
+
+@media only screen and (max-width: 700px) {
+    html, body
+    {
+        width: 100% !important;
+        margin: 0px !important;
+        padding: 0px !important;
+        overflow-x: hidden; 
+    }
+
+    main, footer {
+        grid-template-columns: 1fr;
+    }
+
+    footer > h2 {
+        grid-column-start: 1;
+    }
+    
+    header > h1 {
+        top: 40%;
+        font-size: 200%;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+
+    h4 {
+        font-weight: 400;
+        font-size: 250%;
+        transform: translateX(30%);
+        margin-top: 20px;
+    }
+
+    header {
+        height: 95vh;
+        background: url(../img/background.jpg) no-repeat center fixed;
+        background-size: 490%;
+        position: relative
+    }
+
+    .filterwrapper {
+        max-width: 90%;
+        margin: 30px auto;
+        display:block;
+        justify-content: center;
+    }
+
+    .filterContainer {
+        display: block;
+        justify-content: center;
+        align-items: center;
+        gap:1rem;
+        margin-bottom: 3rem;
+    }
+
+    .filterButton {
+    width: 130px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+    }
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+
+    main, footer {
+        grid-template-columns: 1fr;
+    }
+
+    footer > h2 {
+        grid-column-start: 1;
+    }
+    
+    header > h1 {
+        top: 40%;
+        font-size: 170%;
+    }
+
+    h3{
+        font-size: 30px;
+    }
+}
